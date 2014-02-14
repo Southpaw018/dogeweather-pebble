@@ -1,15 +1,3 @@
-function iconFromWeatherId(weatherId) {
-	if (weatherId < 600) {
-		return 2;
-	} else if (weatherId < 700) {
-		return 3;
-	} else if (weatherId > 800) {
-		return 1;
-	} else {
-		return 0;
-	}
-}
-
 function fetchWeather(latitude, longitude) {
 	var response;
 	var req = new XMLHttpRequest();
@@ -23,7 +11,7 @@ function fetchWeather(latitude, longitude) {
 				if (response && Object.keys(response).length > 0) {
 					var weatherResult = response;
 					temperature = Math.round((weatherResult.main.temp - 273.15) * 1.8 + 32);
-					icon = iconFromWeatherId(weatherResult.weather[0].id);
+					icon = weatherResult.weather[0].icon);
 					city = weatherResult.name;
 					console.log(temperature);
 					console.log(icon);
