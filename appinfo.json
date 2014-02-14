@@ -19,15 +19,94 @@
     "resources": {
         "media": [
             {
-                "menuIcon": true,
                 "type": "png",
-                "name": "IMAGE_MENU_ICON",
-                "file": "images/doge-menu.png"
+                "name": "IMAGE_01d",
+                "file": "images/01d.png"
             },
             {
-                "type": "font",
-                "name": "FONT_COMIC_SANS_MS_21",
-                "file": "fonts/comic.ttf"
+                "type": "png",
+                "name": "IMAGE_01n",
+                "file": "images/01n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_02d",
+                "file": "images/02d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_02n",
+                "file": "images/02n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_03d",
+                "file": "images/03d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_03n",
+                "file": "images/03n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_04d",
+                "file": "images/04d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_04n",
+                "file": "images/04n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_09d",
+                "file": "images/09d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_09n",
+                "file": "images/09n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_10d",
+                "file": "images/10d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_10n",
+                "file": "images/10n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_11d",
+                "file": "images/11d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_11n",
+                "file": "images/11n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_13d",
+                "file": "images/13d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_13n",
+                "file": "images/13n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_50d",
+                "file": "images/50d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_50n",
+                "file": "images/50n.png"
             },
             {
                 "type": "png",
@@ -35,94 +114,15 @@
                 "file": "images/doge-regular.png"
             },
             {
-                "type": "png",
-                "name": "IMAGE_MIST_NIGHT",
-                "file": "images/50n.png"
+                "type": "font",
+                "name": "FONT_COMIC_SANS_MS_21",
+                "file": "fonts/comic.ttf"
             },
             {
+                "menuIcon": true,
                 "type": "png",
-                "name": "IMAGE_MIST_DAY",
-                "file": "images/50d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SNOW_NIGHT",
-                "file": "images/13n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SNOW_DAY",
-                "file": "images/13d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_THUNDER_NIGHT",
-                "file": "images/11n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_THUNDER_DAY",
-                "file": "images/11d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_RAIN_NIGHT",
-                "file": "images/10n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_RAIN_DAY",
-                "file": "images/10d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_DRIZZLE_NIGHT",
-                "file": "images/09n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_DRIZZLE_DAY",
-                "file": "images/09d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_CLOUDS_NIGHT",
-                "file": "images/04n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_CLOUDS_DAY",
-                "file": "images/04d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SCATTEREDCLOUDS_NIGHT",
-                "file": "images/03n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SCATTEREDCLOUDS_DAY",
-                "file": "images/03d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_FEWCLOUDS_NIGHT",
-                "file": "images/02n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_FEWCLOUDS_DAY",
-                "file": "images/02d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_CLEAR_NIGHT",
-                "file": "images/01n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_CLEAR_DAY",
-                "file": "images/01d.png"
+                "name": "IMAGE_MENU_ICON",
+                "file": "images/doge-menu.png"
             }
         ]
     }

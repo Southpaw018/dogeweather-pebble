@@ -14,16 +14,9 @@ static AppSync sync;
 static uint8_t sync_buffer[64];
 
 enum WeatherKey {
-	WEATHER_ICON_KEY = 0x0,			// TUPLE_INT
+	WEATHER_ICON_KEY = 0x0,			// TUPLE_CSTRING
 	WEATHER_TEMPERATURE_KEY = 0x1,	// TUPLE_CSTRING
 	WEATHER_CITY_KEY = 0x2,			// TUPLE_CSTRING
-};
-
-static const uint32_t WEATHER_ICONS[] = {
-	RESOURCE_ID_IMAGE_CLEAR_DAY,		//0
-	RESOURCE_ID_IMAGE_CLEAR_NIGHT,	//1
-	RESOURCE_ID_IMAGE_FEWCLOUDS_DAY,		//2
-	RESOURCE_ID_IMAGE_FEWCLOUDS_NIGHT		//3
 };
 
 static void sync_error_callback(DictionaryResult dict_error, AppMessageResult app_message_error, void *context) {
@@ -36,7 +29,7 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 			if (icon_bitmap) {
 				gbitmap_destroy(icon_bitmap);
 			}
-			icon_bitmap = gbitmap_create_with_resource(WEATHER_ICONS[new_tuple->value->uint8]);
+			icon_bitmap = gbitmap_create_with_resource("RESOURCE_ID_IMAGE_" + new_tuple->value->cstring);
 			//bitmap_layer_set_bitmap(icon_layer, icon_bitmap);
 			break;
 		case WEATHER_TEMPERATURE_KEY:
@@ -128,8 +121,8 @@ static void window_load(Window *window) {
 	layer_add_child(window_layer, line_layer);*/
 
 	//Weather icon
-	/*icon_layer = bitmap_layer_create(GRect(32, 10, 80, 80));
-	layer_add_child(window_layer, bitmap_layer_get_layer(icon_layer));*/
+	icon_layer = bitmap_layer_create(GRect(0, 0, 144, 144));
+	layer_add_child(window_layer, bitmap_layer_get_layer(icon_layer));
 
 	//Weather temperature
 	temperature_layer = text_layer_create(GRect(103, 0, 40, 18));
@@ -149,7 +142,7 @@ static void window_load(Window *window) {
 
 	//Init weather info
 	Tuplet initial_values[] = {
-		TupletInteger(WEATHER_ICON_KEY, (uint8_t) 1),
+		TupletInteger(WEATHER_ICON_KEY, "DOGE"),
 		TupletCString(WEATHER_TEMPERATURE_KEY, "-\u00B0F"),
 		TupletCString(WEATHER_CITY_KEY, "St Pebblesburg"),
 	};
