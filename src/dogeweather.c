@@ -19,6 +19,30 @@ enum WeatherKey {
 	WEATHER_CITY_KEY = 0x2,			// TUPLE_CSTRING
 };
 
+static const uint32_t WEATHER_ICONS[] = {
+	RESOURCE_ID_IMAGE_01d,
+	RESOURCE_ID_IMAGE_01n,
+	RESOURCE_ID_IMAGE_02d,
+	RESOURCE_ID_IMAGE_02n,
+	RESOURCE_ID_IMAGE_03d,
+	RESOURCE_ID_IMAGE_03n,
+	RESOURCE_ID_IMAGE_04d,
+	RESOURCE_ID_IMAGE_04n,
+	RESOURCE_ID_IMAGE_09d,
+	RESOURCE_ID_IMAGE_09n,
+	RESOURCE_ID_IMAGE_10d,
+	RESOURCE_ID_IMAGE_10n,
+	RESOURCE_ID_IMAGE_11d,
+	RESOURCE_ID_IMAGE_11n,
+	RESOURCE_ID_IMAGE_13d,
+	RESOURCE_ID_IMAGE_13n,
+	RESOURCE_ID_IMAGE_50d,
+	RESOURCE_ID_IMAGE_50n,
+	RESOURCE_ID_IMAGE_DOGE
+};
+
+char imageResourceRootString[22] = "RESOURCE_ID_IMAGE_";
+
 static void sync_error_callback(DictionaryResult dict_error, AppMessageResult app_message_error, void *context) {
 	APP_LOG(APP_LOG_LEVEL_DEBUG, "App Message Sync Error: %d", app_message_error);
 }
@@ -29,8 +53,9 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 			if (icon_bitmap) {
 				gbitmap_destroy(icon_bitmap);
 			}
-			icon_bitmap = gbitmap_create_with_resource("RESOURCE_ID_IMAGE_" + new_tuple->value->cstring);
-			//bitmap_layer_set_bitmap(icon_layer, icon_bitmap);
+			//strcat(imageResourceRootString, new_tuple->value->cstring)
+			icon_bitmap = gbitmap_create_with_resource(WEATHER_ICONS[0]);
+			bitmap_layer_set_bitmap(icon_layer, icon_bitmap);
 			break;
 		case WEATHER_TEMPERATURE_KEY:
 			//App Sync keeps new_tuple in sync_buffer, so we may use it directly
@@ -142,7 +167,7 @@ static void window_load(Window *window) {
 
 	//Init weather info
 	Tuplet initial_values[] = {
-		TupletInteger(WEATHER_ICON_KEY, "DOGE"),
+		TupletCString(WEATHER_ICON_KEY, "DOGE"),
 		TupletCString(WEATHER_TEMPERATURE_KEY, "-\u00B0F"),
 		TupletCString(WEATHER_CITY_KEY, "St Pebblesburg"),
 	};
