@@ -11,7 +11,7 @@ function fetchWeather(latitude, longitude) {
 				if (response && Object.keys(response).length > 0) {
 					var weatherResult = response;
 					temperature = Math.round((weatherResult.main.temp - 273.15) * 1.8 + 32);
-					icon = weatherResult.weather[0].icon);
+					icon = weatherResult.weather[0].icon;
 					city = weatherResult.name;
 					console.log(temperature);
 					console.log(icon);
