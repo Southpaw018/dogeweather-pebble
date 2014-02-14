@@ -19,89 +19,20 @@
     "resources": {
         "media": [
             {
+                "menuIcon": true,
                 "type": "png",
-                "name": "IMAGE_CLEAR_DAY",
-                "file": "images/01d.png"
+                "name": "IMAGE_MENU_ICON",
+                "file": "images/doge-menu.png"
+            },
+            {
+                "type": "font",
+                "name": "FONT_COMIC_SANS_MS_21",
+                "file": "fonts/comic.ttf"
             },
             {
                 "type": "png",
-                "name": "IMAGE_CLEAR_NIGHT",
-                "file": "images/01n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_FEWCLOUDS_DAY",
-                "file": "images/02d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_FEWCLOUDS_NIGHT",
-                "file": "images/02n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SCATTEREDCLOUDS_DAY",
-                "file": "images/03d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SCATTEREDCLOUDS_NIGHT",
-                "file": "images/03n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_CLOUDS_DAY",
-                "file": "images/04d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_CLOUDS_NIGHT",
-                "file": "images/04n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_DRIZZLE_DAY",
-                "file": "images/09d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_DRIZZLE_NIGHT",
-                "file": "images/09n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_RAIN_DAY",
-                "file": "images/10d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_RAIN_NIGHT",
-                "file": "images/10n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_THUNDER_DAY",
-                "file": "images/11d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_THUNDER_NIGHT",
-                "file": "images/11n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SNOW_DAY",
-                "file": "images/13d.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_SNOW_NIGHT",
-                "file": "images/13n.png"
-            },
-            {
-                "type": "png",
-                "name": "IMAGE_MIST_DAY",
-                "file": "images/50d.png"
+                "name": "IMAGE_DOGE",
+                "file": "images/doge-regular.png"
             },
             {
                 "type": "png",
@@ -110,20 +41,89 @@
             },
             {
                 "type": "png",
-                "name": "IMAGE_DOGE",
-                "file": "images/doge-regular.png"
+                "name": "IMAGE_MIST_DAY",
+                "file": "images/50d.png"
             },
             {
-                "type": "font",
-                "name": "FONT_COMIC_SANS_MS_21",
-                "file": "fonts/comic.ttf"
-            },
-            {
-                "menuIcon": true,
                 "type": "png",
-                "name": "IMAGE_MENU_ICON",
-                "file": "images/doge-menu.png"
+                "name": "IMAGE_SNOW_NIGHT",
+                "file": "images/13n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_SNOW_DAY",
+                "file": "images/13d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_THUNDER_NIGHT",
+                "file": "images/11n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_THUNDER_DAY",
+                "file": "images/11d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_RAIN_NIGHT",
+                "file": "images/10n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_RAIN_DAY",
+                "file": "images/10d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_DRIZZLE_NIGHT",
+                "file": "images/09n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_DRIZZLE_DAY",
+                "file": "images/09d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_CLOUDS_NIGHT",
+                "file": "images/04n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_CLOUDS_DAY",
+                "file": "images/04d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_SCATTEREDCLOUDS_NIGHT",
+                "file": "images/03n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_SCATTEREDCLOUDS_DAY",
+                "file": "images/03d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_FEWCLOUDS_NIGHT",
+                "file": "images/02n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_FEWCLOUDS_DAY",
+                "file": "images/02d.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_CLEAR_NIGHT",
+                "file": "images/01n.png"
+            },
+            {
+                "type": "png",
+                "name": "IMAGE_CLEAR_DAY",
+                "file": "images/01d.png"
             }
-		]
+        ]
     }
 }

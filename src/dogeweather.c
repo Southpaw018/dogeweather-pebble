@@ -20,10 +20,10 @@ enum WeatherKey {
 };
 
 static const uint32_t WEATHER_ICONS[] = {
-	RESOURCE_ID_IMAGE_SUN,		//0
-	RESOURCE_ID_IMAGE_CLOUD,	//1
-	RESOURCE_ID_IMAGE_RAIN,		//2
-	RESOURCE_ID_IMAGE_SNOW		//3
+	RESOURCE_ID_IMAGE_CLEAR_DAY,		//0
+	RESOURCE_ID_IMAGE_CLEAR_NIGHT,	//1
+	RESOURCE_ID_IMAGE_FEWCLOUDS_DAY,		//2
+	RESOURCE_ID_IMAGE_FEWCLOUDS_NIGHT		//3
 };
 
 static void sync_error_callback(DictionaryResult dict_error, AppMessageResult app_message_error, void *context) {
@@ -80,7 +80,7 @@ void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
 
 	//TODO: Only update the date when it's changed.
 	strftime(date_text, sizeof(date_text), "%B %e", tick_time);
-	text_layer_set_text(text_date_layer, date_text);
+	//text_layer_set_text(text_date_layer, date_text);
 
 
 	if (clock_is_24h_style()) {
@@ -96,7 +96,7 @@ void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
 		memmove(time_text, &time_text[1], sizeof(time_text) - 1);
 	}
 
-	text_layer_set_text(text_time_layer, time_text);
+	//text_layer_set_text(text_time_layer, time_text);
 }
 
 void deinit(void) {
@@ -108,24 +108,24 @@ static void window_load(Window *window) {
 	Layer *window_layer = window_get_root_layer(window);
 
 	//Simplicity date
-	text_date_layer = text_layer_create(GRect(8, 68, 144-8, 168-68));
+	/*text_date_layer = text_layer_create(GRect(8, 68, 144-8, 168-68));
 	text_layer_set_text_color(text_date_layer, GColorWhite);
 	text_layer_set_background_color(text_date_layer, GColorClear);
 	text_layer_set_font(text_date_layer, fonts_get_system_font(FONT_KEY_ROBOTO_CONDENSED_21));
-	layer_add_child(window_layer, text_layer_get_layer(text_date_layer));
+	layer_add_child(window_layer, text_layer_get_layer(text_date_layer));*/
 
 	//Simplicity time
-	text_time_layer = text_layer_create(GRect(7, 92, 144-7, 168-92));
+	/*text_time_layer = text_layer_create(GRect(7, 92, 144-7, 168-92));
 	text_layer_set_text_color(text_time_layer, GColorWhite);
 	text_layer_set_background_color(text_time_layer, GColorClear);
 	text_layer_set_font(text_time_layer, fonts_get_system_font(FONT_KEY_ROBOTO_BOLD_SUBSET_49));
-	layer_add_child(window_layer, text_layer_get_layer(text_time_layer));
+	layer_add_child(window_layer, text_layer_get_layer(text_time_layer));*/
 
 	//Simplicity separator line
-	GRect line_frame = GRect(8, 97, 139, 2);
+	/*GRect line_frame = GRect(8, 97, 139, 2);
 	line_layer = layer_create(line_frame);
 	layer_set_update_proc(line_layer, line_layer_update_callback);
-	layer_add_child(window_layer, line_layer);
+	layer_add_child(window_layer, line_layer);*/
 
 	//Weather icon
 	/*icon_layer = bitmap_layer_create(GRect(32, 10, 80, 80));
